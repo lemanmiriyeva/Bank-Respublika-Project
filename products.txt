@@ -1,0 +1,31 @@
+prcategory1 = ProductCategory(title = 'Plastik Kartlar')
+prcategory1.save()
+prcategory2 = ProductCategory(title = 'Əmanətlər')
+prcategory2.save()
+prcategory3 = ProductCategory(title = 'Kreditlər')
+prcategory3.save()
+prcategory4 = ProductCategory(title = 'Biznes kreditlər')
+prcategory4.save()
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+pr1 = Products(title = 'Mover Visa Classic', category_id=1)
+pr2 = Products(title = 'Digital Card (Rəqəmsal Kart)', category_id=1)
+pr3 = Products(title = 'MasterCard Debit', category_id=1, desc = 'Universal ödəniş vasitəsi olan MasterCard Debit tam pulsuz təklif olunur!')
+pr4 = Products(title = 'NeoKart Standard', category_id=1)
+pr5 = Products(title = 'NeoKart Premium', category_id=1)
+pr6 = Products(title = 'Mover Visa Platinium', category_id=1)
+pr7 = Products(title = 'Faydalı yığım', category_id=2)
+pr8 = Products(title = 'Fermer Krediti', category_id=3)
+pr9 = Products(title = 'Biznes Kreditləri', category_id=4, desc = 'Biznes layihələrini operativ şəkildə maliyyələşdirmək üçün fiziki və hüquqi şəxslərə kreditlər təklif edirik')
+pr10 = Products(title ='İpoteka və Kredit Zəmanət fondu vasitəsilə güzəştli (subsidiyalı) kreditlər', category_id=4, desc ='Biznes layihələrinizi sərfəli faiz dərəcəsi ilə maliyyələşdirmək üçün və ya banka təqdim etməyə girovunuz yoxdursa Bank ilə İpoteka və Kredit Zəmanət Fondunun işbirliyindən faydalana bilərsiniz')
+pr11 = Products(title ='Aqrar Kredit və İnkişaf Agentliyi (AKİA)', category_id=4, desc ='Kənd təsərrüfatı layihələrinizi sərfəli faiz ilə bankın vasitəsi ilə “AKİA”-nın dəstəyi ilə həyata keçirin')
+pr12 = Products(title ='Sahibkarlığın inkişafına dövlətin zəmanətli krediti və subsidiya dəstəyi', category_id=4, desc ='Sahibkarlığın İnkişafı Fondu və Bank Respublika sahibkarlara dövlət zəmanətli kreditlərin verilməsinə başlayıb')
+
+
+
+
+
+
+
+

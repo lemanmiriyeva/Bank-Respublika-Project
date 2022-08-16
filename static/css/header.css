@@ -1,0 +1,246 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar1 {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: transparent;
+}
+
+body {
+    background-color: #fafafc;
+}
+
+.form-control:focus {
+    background-color: rgba(230, 231, 233, 0.5) !important;
+}
+
+* {
+    font-family: 'Questrial', sans-serif;
+}
+
+.nav-list1 {
+    width: 85%;
+    justify-content: space-between;
+}
+
+.nav-list2 {
+    width: 60%;
+    justify-content: space-between;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 90%;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.second-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.first-section ul,
+.second-section ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.first-section {
+    width: 15%;
+}
+
+.second-section {
+    width: 35%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+a:hover {
+    color: #485dc6 !important;
+}
+
+.item1::before {
+    content: "";
+    background-image: url(https://www.bankrespublika.az/site/views/site/images/whatsapp.png);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.item2::before {
+    content: "";
+    background-image: url(https://www.bankrespublika.az/site/views/site/images/io.png);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.item3::before {
+    content: "";
+    background-image: url(https://www.bankrespublika.az/site/views/site/images/is.png);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown:hover .dropdown-toggle {
+    color: #485dc6 !important;
+}
+
+.headbtn {
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 1;
+}
+
+.navbar1 {
+    height: 100px;
+    align-items: center;
+}
+
+.first-item,
+.second-item {
+    height: 40px;
+    width: 48%;
+}
+
+.headbtn:hover {
+    color: #485dc6 !important;
+}
+
+.modal {
+    width: 100vw !important;
+}
+
+.modal-dialog {
+    width: 100vw !important;
+    height: 90vh !important;
+}
+
+.modal-content {
+    width: 100vw !important;
+    height: 100% !important;
+}
+
+.droppart {
+    z-index: 1001;
+}
+
+.searchcontent {
+    width: 90%;
+    margin: auto;
+    height: 90%;
+}
+
+.modal-header,
+.modal-footer {
+    border: none !important;
+}
+
+.modal-body {
+    height: 30% !important;
+}
+
+.search {
+    position: relative;
+    box-shadow: 0 0 24px 0 rgba(230, 231, 233, 0.5);
+    border: none !important;
+}
+
+.search input {
+    height: 60px;
+    text-indent: 25px;
+    background-color: rgba(230, 231, 233, 0.5);
+    border: none !important;
+}
+
+.search input:focus {
+    box-shadow: none;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    box-shadow: 0 0 24px 0 rgba(230, 231, 233, 0.5);
+    padding: 0 1%;
+    border-radius: 10px;
+}
+
+.menu2 {
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    min-width: 2rem !important;
+}
+
+.dropdown-item:hover {
+    margin-left: 5%;
+    transition: all .2s ease-in-out;
+    background-color: transparent !important;
+}
+
+.btnabout:hover+.menuabout {
+    z-index: 1 !important;
+}
+
+.btnabout:hover+.btn12 {
+    z-index: 0 !important;
+}

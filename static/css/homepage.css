@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    padding: 3px 0px;
+}
+
+ul {
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footerimg .col-2 a img {
+    height: 60px;
+    width: 60px;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0px 3px 5px 0px rgb(71 94 208 / 40%);
+}
+
+.footerimg .col-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerpart .col-6 {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
+}
+
+.socialicons li {
+    padding: 30px 10px;
+}
+
+.socialicons {
+    display: flex;
+}
+
+.socialicons li a {
+    color: #888;
+    font-size: 20px;
+}
+
+.col-2 h2 {
+    font-size: 16px;
+    padding: 15px 0px;
+}
+
+.col-2 li a {
+    font-size: 14px;
+}
+
+.hoverbtn {
+    background-color: #475ED0 !important;
+    box-shadow: 0 6px 8px 0 rgb(71 94 208 / 40%);
+}
+
+.hoverbtn:hover,
+.ətraflı:hover {
+    background-color: #76B734 !important;
+    border-color: #76B734 !important;
+    color: white !important;
+}
+
+.generalcarousel {
+    margin-top: -2%;
+}
+
+.fa-check {
+    margin-right: 15px;
+    color: #76B734;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-part {
+    margin-top: 12vh;
+}
+
+.whitebox {
+    box-shadow: 2px 2px 50px 0 rgb(107 125 230 / 10%);
+    background-color: #fff;
+}
+
+.img-fluid {
+    position: absolute;
+    width: 25%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content {
+    max-width: 1440px;
+    padding: 0px 40px;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+}
+
+h2.blockHead {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.allNews {
+    float: right;
+    font-size: 18px;
+    padding: 10px 20px 0px 0px;
+}
+
+.shadow {
+    box-shadow: 2px 2px 50px 0 rgb(107 125 230 / 20%);
+}
+
+.productTitle {
+    color: #A7A7A7;
+    padding-left: 10px;
+}
+
+.bankmehsulu {
+    border: none;
+    background-color: transparent;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: end;
+}
+
+.owl-theme .owl-nav {
+    margin-top: -70px !important;
+    padding-right: 57px !important;
+}
+
+.prtitle {
+    padding: 10px 0px 20px 10px;
+}
+
+.owl-stage {
+    width: 6000px !important;
+}
+
+.valyuta {
+    padding-bottom: 10px;
+}
+
+.rubl {
+    display: none;
+    background: #EDEFFA;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    width: 150px;
+    top: 813px;
+    left: 56vw;
+}
+
+.info i {
+    color: #475ED0;
+}
+
+.info:hover .rubl {
+    display: block;
+}
+
+i {
+    z-index: 1;
+    color: #666;
+}
+
+.col-md-2 strong {
+    color: #475ED0;
+}
+
+.bottom {
+    border-bottom: 2px solid #475ED0;
+    color: #475ED0;
+}
+
+.app {
+    padding: 70px 0px;
+    position: relative;
+}
+
+.block {
+    padding: 40px 30px 40px 330px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 50px 0 rgb(107 125 230 / 20%);
+}
+
+.appimg {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+
+.apptextinfo {
+    height: 125px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    z-index: 1001;
+}
+
+.appstore {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.appstore li {
+    position: relative;
+    top: 10px;
+}
+
+.company-slider {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.owlslider .owl-item.active.center .slider-card {
+    opacity: 1;
+    background-color: #fff;
+}
+
+.slider-card {
+    height: 90%;
+    background-color: #fff;
+    margin: 50px 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 50px 0 rgb(107 125 230 / 20%);
+}
+
+.owl-carousel .owl-item img {
+    height: 200px;
+    width: 210px !important;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.owlslider .owl-item .slider-card {
+    opacity: 0.3;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.owlslider .carouselMehsul.owl-drag .owl-item {
+    height: 300px;
+    margin-bottom: 100px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    z-index: 1001;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    background-color: white;
+}
+
+.carouselXeber.owl-drag .owl-item {
+    height: 367px !important;
+}
+
+.carouselMehsul .card {
+    border: none;
+}
+
+.carouselMehsul>.owl-stage-outer {
+    height: 327px !important;
+}
+
+.carouselMehsul .owl-item.active {
+    height: 255px !important;
+    box-shadow: 2px 2px 50px 0 rgb(133 146 218 / 15%);
+}
+
+.ətraflı {
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 0 24px 0 rgb(212 213 214 / 50%);
+    background-color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    padding: 15px 35px;
+    display: table-cell;
+    text-decoration: none;
+    margin-top: -7px;
+}
+
+.description {
+    font-family: Gilroy;
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 30px 10px;
+}
+
+.bigCarousel {
+    position: absolute;
+    top: 100px;
+    right: 1000px;
+    text-align: start !important;
+    width: 450px;
+}
+
+.col-4 .carousel-indicators {
+    display: none;
+}
+
+.smallcarousel {
+    height: 5px !important;
+    top: 75px;
+    left: 24px !important;
+    text-align: start !important;
+    width: 433px;
+}
+
+.smallcarousel h3 {
+    font-size: 25px!important;
+    width: 315px;
+}
+
+.arrowrange {
+    width: 25% !important;
+}
+
+.arrowrange:hover {
+    opacity: 1;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 0px;
+}
+
+#btn1 {
+    opacity: 1;
+    position: absolute;
+    z-index: 1000;
+    width: 1% !important;
+}
+
+#btn2 {
+    position: absolute;
+    z-index: 1001;
+    opacity: 0.4;
+    width: 24% !important;
+}
+
+.preicon {
+    position: absolute;
+    left: 332px;
+}
+
+#nextpre {
+    position: absolute;
+    top: 358px
+}
+
+.nexticon {
+    position: absolute;
+    margin-left: 742px;
+}
+
+.allcompany {
+    text-align-last: end;
+    position: absolute;
+    right: 125px;
+    text-decoration: underline;
+    color: white;
+    z-index: 1;
+}
+
+.footerli li:hover {
+    margin-left: 5%;
+    transition: all .2s ease-in-out;
+}

@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} {% block head %}
+<title>Card detail</title>
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/cards.css')}}"> {% endblock %} {% block content %}
+
+<div class="cart-selector {{ card.filter }}">
+    <div class="card py-5 px-5 col-md-12 text-light" style="margin-top:-2%;width: 100%;background-color: #272c43;background-image: url('https://www.bankrespublika.az/site/views/site/images/bgCircles.svg');background-repeat: no-repeat;background-position: 125%">
+        <div class="row">
+            <div class="col-md-3 d-flex flex-column justify-content-between align-items-start leftside">
+                <img src="{{ card.img }}" style="width: 20% !important;" class="img-fluid rounded-start mb-4" alt="...">
+                <a class="btn w-100 orderBtn" style="box-shadow: rgba(63, 63, 221, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px !important;border-radius: 24px !important;height: 48px;display: flex !important;align-items: center;justify-content: center;background-color: #475ed0 !important;color: #fff !important;margin-top: 200px !important;">Sifariş et</a>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="card-title mb-3 d-flex justify-content-between align-items-center">
+                        <h1 class="card-title text-light" style="font-size: 48px;">{{ card.title }}</h1>
+                    </div>
+
+                    <p class="card-text">{{ card.description }}</p>
+                    <div class="text2" style="display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;">
+                        <div class="text">
+                            <h5 class="text-light">{{ card.buraxilma }}</h5><small class="text-light">{{ card.buraxilma_d }}</small>
+                        </div>
+                        <div class="text">
+                            <h5 class="text-light">{{ card.istifade }}</h5><small class="text-light">{{ card.istifade_d }}</small>
+                        </div>
+                        <div class="text">
+                            <h5 class="text-light">{{ card.faiz }}</h5><small class="text-light">{{ card.faiz_d }}</small>
+                        </div>
+                        <div class="text">
+                            <h5 class="text-light">{{ card.valyuta }}</h5><small class="text-light">{{ card.valyuta_d }}</small>
+                        </div>
+                        <div class="text">
+                            <h5 class="text-light">{{ card.kredit }}</h5><small class="text-light">{{ card.kredit_d }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container bg-light p-0">
+    <h4 class="text-center mb-3 pt-5">{{ card.card_name }}</h4>
+    {{ card.details | safe }}
+</div>
+{% endblock %} {% block footer %}
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+</script>
+
+{% endblock %}

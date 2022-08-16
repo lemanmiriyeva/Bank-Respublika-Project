@@ -1,0 +1,44 @@
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 24px 0 rgb(212 213 214 / 50%);
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.companydate {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.companydate {
+    margin-bottom: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.rounded-start {
+    height: 87%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 1;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+.newsimg {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}

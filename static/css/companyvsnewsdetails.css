@@ -1,0 +1,31 @@
+.imgContainer {
+    width: 600px;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.whitebox {
+    border-radius: 4px;
+    box-shadow: 2px 2px 50px 0 rgb(107 125 230 / 10%);
+    background-color: #fff;
+    padding: 40px;
+    transition: all 0.2s ease-in-out;
+}
+
+.box {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px 40px;
+    position: relative;
+    margin: 0px auto;
+}
+
+.articlebody ul li {
+    list-style-type: disc !important;
+    margin-left: 22px;
+}
+
+.articlebody a {
+    color: #475ed0;
+}

@@ -1,0 +1,141 @@
+.SlideContainer {
+    position: relative;
+}
+
+.SlideContainer .bar1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 78%;
+    height: 3px;
+    background-color: rgb(195, 176, 176);
+    overflow: hidden;
+    padding-right: 0%;
+}
+
+.SlideContainer .bar2 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 84%;
+    height: 3px;
+    background-color: rgb(195, 176, 176);
+    overflow: hidden;
+}
+
+.SlideContainer .bar1 .fill1 {
+    display: block;
+    /* width: 100% !important; */
+    /* height: 100%; */
+    height: 10px;
+    background-color: #475ed0;
+}
+
+.SlideContainer .bar2 .fill2 {
+    display: block;
+    width: 40%;
+    height: 100%;
+    height: 10px;
+    background-color: #475ed0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 3px;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 12px;
+    font-family: 'Gilroy';
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/triangle.svg);
+    margin-top: 22px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/triangle.svg);
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+#myrange1::after {
+    content: '30000';
+    color: black;
+    font-size: 16px;
+    position: relative;
+    left: 15%;
+}
+
+#myrange1::before {
+    content: '0';
+    color: black;
+    font-size: 16px;
+    position: relative;
+    left: -117%;
+    top: 26%;
+}
+
+#myrange2::after {
+    content: '36';
+    color: black;
+    font-size: 16px;
+    position: relative;
+    left: 40%;
+    top: 26%;
+}
+
+#myrange2::before {
+    content: '0';
+    color: black;
+    font-size: 16px;
+    position: relative;
+    left: 5%;
+    top: 26%;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #F5F6F7 !important;
+    border-radius: 5px;
+    width: 79%;
+}
+
+.amount2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #F5F6F7 !important;
+    border-radius: 5px;
+    width: 84%;
+}
+
+.irs-1 {
+    position: absolute;
+    width: 1px;
+    margin-left: 78%;
+    height: 8px;
+    background: #000;
+}
+
+.irs-2 {
+    position: absolute;
+    width: 1px;
+    margin-left: 84%;
+    height: 8px;
+    background: #000;
+}

@@ -1,0 +1,32 @@
+<html lang="en">
+{% extends "layout.html" %}
+
+<head>
+    {% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/companyvsnewsdetails.css')}}"> {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="row my-3">
+            <h3>{{news_one.title}}</h3>
+        </div>
+        <div class="col">
+            <div class="whitebox">
+                <div class="box">
+                    <div class="whitebox">
+                        <img class="imgContainer" src="{{ url_for('static', filename='images/' ~ news_one.img_url ) }}" />
+                        <div class="articlebody my-5">
+                            <div>{{news_one.large_desc |safe}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

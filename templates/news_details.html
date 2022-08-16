@@ -1,0 +1,93 @@
+<html lang="en">
+{% extends "layout.html" %}
+
+<head>
+    {% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/specialnews.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/homepage.css')}}"> {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="row my-5">
+            <h3>{{news_one.title}}</h3>
+        </div>
+        <div class=" whitebox">
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="social">
+                        <h6 class="text-center mt-5">Sosial şəbəkələrdə paylaş</h6>
+                        <ul class="icons">
+                            <li>
+                                <a href="https://www.facebook.com/BankRespublika/"><img src="../static/images/facebook_icon-icons.com_59205.ico" alt=""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://mobile.twitter.com/bank_respublika"><img src="../static/images/1491579542-yumminkysocialmedia22_83078.ico" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="../static/images/1486053612-googleplus_79196.ico" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="https://vk.com/wall-130992537_535"><img src="../static/images/vk_icon-icons.com_66681.ico" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/bankrespublika/?originalSubdomain=az"><img src="../static/images/iconfinder-linkedin-4550875_121338.ico" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-9">
+                    <div class="col">
+                        <div class="box">
+                            <div class="whitebox">
+                                <img class="imgContainer" src="{{ url_for('static', filename='images/' ~ news_one.img_url ) }}" />
+                                <div class="articlebody my-5">
+                                    <div>{{news_one.large_desc |safe}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content ">
+        <h2 class="blockHead">Xəbərlər
+            <a href="{{url_for( 'news_page', filename='news.html' )}} "><u class="allnews"> Bütün Xəbərlər</u></a>
+        </h2>
+    </div>
+    <div class="owlslider">
+        <div class="owl-carousel carouselXeber owl-theme ">
+            {% for xeber in news %}
+            <div class="slider-card d-flex">
+                <div class="mx-2">
+
+                    <img alt="" src="{{ url_for( 'static', filename='images/' ~ xeber.img_url ) }} " />
+
+                </div>
+                <div>
+
+                    <a href="{{url_for( 'dinamic', slug=xeber.slug)}} ">
+                        <h5 class="card-title ">{{xeber.title}}</h5>
+                    </a>
+
+                    <p class="card-text ">{{xeber.small_desc}}</p>
+                    <p class="card-text "><small class="text-muted ">{{xeber.created_at}}</small></p>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endblock %}
+    <script src="{{url_for( 'static', filename='js/owl.js' )}} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>{% block js %} {% endblock %}
+</body>
+
+</html>

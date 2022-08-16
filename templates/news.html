@@ -1,0 +1,34 @@
+<html lang="en">
+{% extends "layout.html" %}
+
+<head>
+    {% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/news.css')}}">{% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="container my-5">
+        <h3>Xəbərlər</h3>
+        {% for xeber in news %}
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4 newsimg">
+                    <img src="{{ url_for('static', filename='images/' ~ xeber.img_url ) }}" class="rounded-start" alt="Database.img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <a class="card-title" href=" {{url_for( 'dinamic', slug=xeber.slug)}} ">{{xeber.title}}</a>
+                        <p class="card-text py-3 ">{{xeber.small_desc}}</p>
+                        <p class="card-text companydate  "><small class="text-muted ">{{xeber.created_at}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>

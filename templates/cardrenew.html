@@ -1,0 +1,72 @@
+<html lang="en">
+{% extends "layout.html" %} {% from "_formhelpers.html" import render_field %}
+
+<head>
+    {% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/cardrenew.css')}}"> {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+
+    <div class="container my-5">
+        <div class="row">
+            <h3>Kartın onlayn uzadılması</h3>
+        </div>
+        <form action="/cardrenew" method="POST" class="generaldiv p-5">
+            {{ form.csrf_token }}
+            <div class="row">
+                <div class="col-md-4 cardnumber">
+                    {{render_field(form.card_number)}}
+                </div>
+                <div class="col-md-4 d-flex seriyahead">
+                    <div class="col-2  ">{{render_field(form.seriya_head)}}</div>
+                    <div class="col-10">{{render_field(form.seriya_number)}}</div>
+                </div>
+                <div class="col-md-4 phonenumber">
+                    <div class="col-3 d-flex justify-content-between  numberfield">
+                        <div class="col-2 d-flex align-items-center "><span class="countrykod">+994</span></div>
+                        {{ render_field(form.number_prefix) }}
+                        <div class="phonenum mt-2">{{ render_field(form.phone_number)}}</div>
+                    </div>
+                </div>
+                <div class="col-md-4 ordertype">
+                    {{render_field(form.order_type)}}
+
+                    <p class="orderprice1">10 man</p>
+                    <p class="orderprice2">0 man</p>
+
+
+                </div>
+                <div class="col-md-4 filial">
+                    {{ render_field(form.filial) }}
+                </div>
+                <div class="col-md-4 "></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 ">
+                    <input autocomplete="off " placeholder="Recaptcha " type="text " name="security_code " class="fixedInput requiredField recaptcha textinput " required=" ">
+                </div>
+                <div class="col-md-2 ">
+                    <input type="text " class="fixedInput requiredField recaptcha captcha " readonly="readonly">
+                    <button class="captcha-refresh " onclick="cap() "> <i class="fa fa-refresh "></i> </button>
+                </div>
+            </div>
+            <div class="row text-center ">
+                <div class="form-submit ">
+                    <a href="{{url_for( 'renew')}}"> <button onclick="validCap()" type="submit" class="submitBtn">Göndər</button></a>
+
+
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    {% endblock %} {% block js %}
+    <script src="{{url_for( 'static', filename='js/cardrenew.js' )}} "></script> {% endblock %}
+</body>
+
+
+</html>

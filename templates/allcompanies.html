@@ -1,0 +1,49 @@
+<html lang="en">
+{% extends "layout.html" %}
+
+<head>
+    {% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/news.css')}}">{% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="container my-5">
+        <div class=" mx-auto" style="width:36%">
+            <ul class="d-flex">
+                <li class="first-item1 " style="border-bottom: 2px solid rgb(72, 93, 198); "><button class="btn headbtn btn1 " onclick="change3() " style="color: rgb(72, 93, 198); ">Fərdi müştərilər üçün</button></li>
+                <li class="second-item1"><button class=" btn headbtn btn2 " onclick="change4() ">Korporativ müştərilər üçün</button></li>
+            </ul>
+        </div>
+        <hr style="margin-top: -2.5px;">
+        <div class="campaigns ">
+            <h3>Kampaniyalar</h3>
+
+            {% for kompaniya in kampaniyalar %}{% if kompaniya.kampaniya_desc is defined and kompaniya.kampaniya_desc %}
+            <div class="card mb-3 ">
+                <div class="row g-0 ">
+                    <div class="col-md-4 newsimg ">
+                        <img src="{{ url_for( 'static', filename='images/' ~ kompaniya.img_url ) }} " class="rounded-start " alt="Database.img ">
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="card-body ">
+                            <a class="card-title " href="{{url_for( 'company', slug=kompaniya.slug)}} ">{{kompaniya.title}}</a>
+                            <div class="my-5 ">
+                                <p class="card-text ">{{kompaniya.kampaniya_desc |safe}}</p>
+                                <p class="card-text ">{{kompaniya.small_desc}}</p>
+                            </div>
+
+                            <p class="card-text companydate "><small class="text-muted ">{{kompaniya.created_at}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+    <div id="loadmore " class="loadMore " data-lang="az " data-link="https://www.bankrespublika.az/postsajax/loadmorearticles " data-page="1 " data-category=" " data-slug="news "><span class="icons ico-loadMore "></span></div>
+    {% endblock %}
+
+</body>
+
+</html>

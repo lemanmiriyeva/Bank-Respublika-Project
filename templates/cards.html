@@ -1,0 +1,101 @@
+{% extends 'layout.html' %} {% block head %}
+<title>Bank Respublika</title>
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/cards.css')}}"> {% endblock %} {% endblock %} {% block content %}
+
+<div class="content-div">
+    <div class="container-fluid" style="width: 94%; margin: auto;">
+        <div class="filters">
+
+            <div class="ui-group">
+                <div class="button-group js-radio-button-group first-buttons" data-filter-group="color">
+                    <button class="button first" data-filter=".credit">Kredit</button>
+                    <button class="button second" data-filter=".debet">Debit</button>
+                    <button class="button third" data-filter=".taksit">Taksit</button>
+                    <button class="button last last2" data-filter=".kocurme">Köçürmələr üçün</button>
+                </div>
+            </div>
+
+            <div class="ui-group">
+                <div class="button-group js-radio-button-group second-buttons" data-filter-group="size">
+                    <button class="button first d-flex align-items-center justify-content-between" data-filter=".master"><img src="https://www.bankrespublika.az/site/views/site/images/icons/mastercard.svg" alt=""> Mastercard</button>
+                    <button class="button last d-flex align-items-center justify-content-around" data-filter=".visa"><img src="https://www.bankrespublika.az/site/views/site/images/icons/visa.svg" alt=""> Visa</button>
+                </div>
+            </div>
+
+            <div class="ui-group">
+                <div class="button-group js-radio-button-group third-buttons" data-filter-group="shape">
+                    <button class="button first" data-filter=".classic">Classic</button>
+                    <button class="button second" data-filter=".gold">Gold</button>
+                    <button class="button last" data-filter=".premium">Premium</button>
+                </div>
+            </div>
+            <div class="ui-group">
+                <div class="button-group js-radio-button-group fourth-buttons" data-filter-group="shape">
+                    <button class="button first" data-filter=".azn">₼</button>
+                    <button class="button second" data-filter=".dollar">$</button>
+                    <button class="button last" data-filter=".euro">€</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container kartlar">
+            {% for card in cards %}
+            <div class="cart-selector {{ card.filter }}">
+                <div class="card py-5 px-5">
+                    <div class="row">
+                        <div class="col-md-3 d-flex flex-column  align-items-center mt-4 leftside">
+                            <img src="{{ card.img }}" class="img-fluid rounded-start" alt="...">
+                            <a class="btn w-100 orderBtn">Sifariş et</a>
+                            <a href="{{ url_for('detail', id = card.id) }}" class="btn btn-default w-100 detailBtn">Ətraflı</a>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <div class="card-title mb-3 d-flex justify-content-between align-items-center">
+                                    <a href="{{ url_for('detail', id = card.id) }}" class="card-title text-dark d-flex justify-content-between">
+                                        <h3>{{card.title}}</h3><img src="https://ichip.uz/wp-content/uploads/2020/03/Contactless-icon.png" alt=""> </a>
+                                </div>
+
+                                <p class="card-text mb-5">{{ card.description }}</p>
+                                <div class="text2">
+                                    <div class="text">
+                                        <h5>{{ card.buraxilma }}</h5><small class="text-muted">{{ card.buraxilma_d }}</small>
+                                    </div>
+                                    <div class="text">
+                                        <h5>{{ card.istifade }}</h5><small class="text-muted">{{ card.istifade_d }}</small>
+                                    </div>
+                                    <div class="text">
+                                        <h5>{{ card.faiz }}</h5><small class="text-muted">{{ card.faiz_d }}</small>
+                                    </div>
+                                    <div class="text">
+                                        <h5>{{ card.valyuta }}</h5><small class="text-muted">{{ card.valyuta_d }}</small>
+                                    </div>
+                                    <div class="text mt-2">
+                                        <h5>{{ card.kredit }}</h5><small class="text-muted">{{ card.kredit_d }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- </div> -->
+        </div>
+    </div>
+    {% endblock %} {% block js %}
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- or -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <script src="{{url_for('static', filename = 'js/cards.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    {% endblock %}
+    </body>
+
+    </html>

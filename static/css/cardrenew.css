@@ -1,0 +1,197 @@
+.filial .form-control,
+.cardnumber .form-control,
+.ordertype ul li {
+    border: none;
+    box-shadow: 0 0 24px 0 rgb(183 185 187 / 50%);
+    height: 50px;
+    border-radius: 40px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.cardnumber .form-control,
+.ordertype ul li {
+    padding-right: 77%;
+}
+
+.ordertype ul {
+    border: none;
+}
+
+label {
+    margin-bottom: 16px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+li label {
+    margin-bottom: 0px;
+}
+
+.seriyahead label,
+.numberfield>.form-group:first-child label {
+    width: 241px;
+}
+
+#seriya_number {
+    margin-top: 24px;
+    border: none;
+    height: 50px;
+    border-radius: 40px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+#seriya_head {
+    height: 51px;
+    border: none;
+    box-shadow: 0 0 24px 0 rgb(183 185 187 / 50%);
+    border-radius: 40px;
+    padding-left: 27%;
+    display: flex;
+    align-items: center;
+    width: 385px;
+}
+
+#card_number {
+    padding-right: 10px;
+}
+
+.orderprice1 {
+    left: 299px;
+    position: relative;
+    top: -128px;
+}
+
+.orderprice2 {
+    left: 304px;
+    position: relative;
+    top: -101px;
+}
+
+#number_prefix {
+    display: flex;
+    position: absolute;
+    top: 396px;
+    border: none;
+    height: 49px;
+    right: 391px;
+    margin-top: 6px;
+    cursor: pointer;
+    width: 80px;
+}
+
+label [for="number_prefix"] {
+    width: 108px;
+}
+
+#phone_number {
+    margin-top: 21px;
+    box-shadow: 0 0 24px 0 rgb(183 185 187 / 50%);
+    height: 50px;
+    padding-left: 27%;
+    display: flex;
+    border: none;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6%;
+    cursor: pointer;
+    width: 265px;
+}
+
+.countrykod {
+    margin-top: 30px;
+    margin-left: 22px;
+    box-shadow: 0 0 24px 0 rgb(183 185 187 / 50%);
+    height: 51px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    width: 111px;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    border: none;
+}
+
+.generaldiv {
+    margin: auto;
+    background-color: white;
+    box-shadow: 2px 2px 50px 0 rgb(107 125 230 / 10%);
+    border-radius: 4px;
+}
+
+.submitBtn {
+    box-shadow: 0 6px 8px 0 rgb(71 94 208 / 40%);
+    background-color: #475ed0;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    font-size: 16px;
+    color: #fff !important;
+    text-align: center;
+    padding: 13px 40px;
+}
+
+.submitBtn:hover {
+    background-color: #70b65a !important;
+    cursor: pointer;
+}
+
+.branches {
+    box-shadow: 0 0 24px 0 rgba(183, 185, 187, 0.5);
+    height: 54px;
+    border-radius: 40px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.rightFixed {
+    top: -57px;
+    right: -321px;
+    position: relative;
+}
+
+.recaptcha {
+    border: none;
+    box-shadow: 0 0 24px 0 rgba(183, 185, 187, 0.5);
+    height: 54px;
+    border-radius: 40px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.captcha-refresh {
+    background-color: white;
+    position: relative;
+    top: -45px;
+    right: -172px;
+    border-radius: 13px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

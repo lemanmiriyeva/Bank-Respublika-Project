@@ -1,0 +1,321 @@
+<html lang="en">
+{% extends "layout.html" %}
+
+<head>
+
+    {% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/calculator.css' )}}">{% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div id="carouselExampleCaptions" class="carousel slide generalcarousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active arrowrange" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions " data-bs-slide-to="1" aria-label="Slide 2" class="arrowrange"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="arrowrange"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class="arrowrange"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{url_for('static', filename = 'images/yubiley_slider.png')}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block bigCarousel">
+                    <h3>“Yubiley Endirimi” nağd kredit kampaniyası</h3>
+                    <p class="description">“Bank Respublika”ya müraciət edən <br> istənilən peşə sahibləri nağd istehlak kreditlərini <br> illik 14%-lə və 0% komissiya ilə <br> götürmək imkanı əldə edəcəklər.</p>
+                    <a href=""><button class="ətraflı ">Ətraflı</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename = 'images/Mikro_maksimal.png')}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block  bigCarousel">
+                    <h3 class="title">Mikro və Aqro kreditlərə MAKSİMAL ENDİRİM!</h3>
+                    <p class="description">Kredit ticarət, kənd təsərrüfatı, xidmət, <br> istehsal və tikinti sahələrində sahibkarlıq fəaliyyəti <br> ilə məşğul olan iş adamlarına təqdim olunur.</p>
+                    <a href=""><button class="ətraflı ">Ətraflı</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename = 'images/kreditxetti_Slider.png')}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block bigCarousel">
+                    <h3>NeoKart Kredit</h3>
+                    <p class="description">İndi, Siz güzəşt müddəti 45 gün olan <br> 15.000 AZN-dək kredit xətti əldə edə biləcəksiniz! <br> Pul xərclədikcə isə, KEŞBEK qazanacaqsınız! </p>
+                    <a href=" "><button class="ətraflı ">Ətraflı</button></a>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="{{url_for( 'static', filename='images/qalaktika_Slider.png' )}} " class="d-block w-100 " alt="... ">
+                <div class="carousel-caption d-none d-md-block bigCarousel">
+                    <h3>Neo Qalaktikada daha çox bonus qazanacaqsınız!</h3>
+                    <p class="description">NeoKart DAHA SƏRFƏLİ oldu! <br> İndi Siz, NEO QALAKTİKADA misilsiz bonuslar qazanacaqsınız! <br> Ödənişlərinizi NeoKart ilə edin və 55%-dək keşbek qazanın!</p>
+                    <a href=" "><button class="ətraflı ">Ətraflı</button></a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleCaptions " data-bs-slide="prev ">
+          <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+          <span class="visually-hidden ">Previous</span>
+        </button>
+        <button class="carousel-control-next " type="button " data-bs-target="#carouselExampleCaptions " data-bs-slide="next ">
+          <span class="carousel-control-next-icon " ></span>
+          <span class="visually-hidden ">Next</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row py-4 whitebox" style="margin: 20px 31px 20px 0px;">
+            <div class="col-9 mx-auto">
+                <div class="row valyuta">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"><strong>EUR</strong></div>
+                    <div class="col-md-2"><strong>GBP</strong></div>
+                    <div class="col-md-2 d-flex">
+                        <div class="col-6"><strong>RUB</strong></div>
+                        <div class="col-6 info">
+                            <i class="fa-solid fa-circle-info "></i>
+                            <div class="rubl">
+                                Rubl valyutası üzrə məzənnə yalnız pulköçürmə əməliyyatları üçün təqdim olunur.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"><strong>USD</strong></div>
+
+                </div>
+                <div class="prices">
+                    <div class="row">
+                        <div class="col-md-2">Alış / Satış</div>
+                        <div class="col-md-2"><span><i class="fa-solid fa-square fa-2xs"></i></span> <span>1.777  / {{currency['ValCurs']['ValType'][1]['Valute'][1]['Value']}}</span></div>
+                        <div class="col-md-2"><span><i class="fa-solid fa-square fa-2xs"></i></span> <span>2.043 / {{currency['ValCurs']['ValType'][1]['Valute'][16]['Value']}}</span></div>
+                        <div class="col-md-2"><span><i class="fa-solid fa-square fa-2xs"></i></span> <span>0.0265 / {{currency['ValCurs']['ValType'][1]['Valute'][34]['Value']}}</span></div>
+                        <div class="col-md-2"><span><i class="fa-solid fa-square fa-2xs"></i></span> <span>1.69 / {{currency['ValCurs']['ValType'][1]['Valute'][0]['Value']}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="whitebox " style="width: 24rem; height: 18rem;">
+                    <div class="card-body">
+                        <a class="card-title">Plastik Kart Sifarişi</a>
+                        <div class="card-part">
+                            <ul>
+                                <li><span><i class=" fa-solid fa-check "></i></span> <span>Kartınızı <u>PULSUZ</u> əldə edin</span></li>
+                                <li><span><i class="fa-solid fa-check "></i></span><span>Cash-back bonuslar qazanın</span></li>
+                            </ul>
+                            <a href="# " class="d-grid gap-2 btn rounded-pill text-white  hoverbtn">Sifariş et</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="whitebox  " style="width: 24rem; height: 18rem; ">
+                    <div class="card-body ">
+                        <a class="card-title ">Nağd Pul Krediti</a>
+                        <div class="card-part">
+                            <ul>
+                                <li><span><i class="fa-solid fa-check "></i></span> <span>Nağd kredit indi daha sərfəli! 15%-dan!</span></li>
+                                <li><span><i class="fa-solid fa-check "></i></span><span><u>30.000 AZN</u> -dək maksimal kredit məbləği</span>
+                                </li>
+                            </ul>
+                            <a href="# " class="d-grid gap-2 btn rounded-pill text-white hoverbtn  " onclick="calculate()">Krediti sifariş et</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="whitebox  " style="width: 24rem; height: 18rem; ">
+                    <div class="card-body ">
+                        <a class="card-title ">Onlayn Kredit Ödənişi</a>
+                        <div class="card-part">
+                            <ul>
+                                <li><span><i class="fa-solid fa-check "></i></span> <span><u>Banka gəlmədən</u> </span></li>
+                                <li><span><i class="fa-solid fa-check "></i></span><span>Bir dəqiqə ərzində ödəniş</span></li>
+                            </ul>
+                            <a href="# " class="d-grid gap-2 btn rounded-pill text-white hoverbtn">Krediti onlayn ödə</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row text-center">
+            <h2>Kreditinizi dərhal hesablayın</h2>
+            <div class="my-3"><a class="bottom" href="">Nağd pul krediti</a></div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-4">
+                <label for="basic-url" class="form-label">Kreditin məbləği</label>
+                <div class="SlideContainer">
+                    <div class="amount">
+                        <span id="value1"><input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="15000"></span>
+                        <span>AZN</span>
+                    </div>
+                    <span class="bar1"><span class="fill1"></span></span>
+                    <input class="slider " id="myrange1" type="range" min="100" max="30000" step="100" value="15000" data-orientation="vertical">
+                    <span class="irs-grid-pol irs-1" style="left: 0%"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="basic-url" class="form-label">Kreditin müddəti</label>
+                <div class="SlideContainer">
+                    <div class="amount2">
+                        <span id="value2"> <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="5"></span>
+                        <span>ay</span>
+                    </div>
+                    <span class="bar2"><span class="fill2"></span></span>
+                    <input class="slider" id="myrange2" type="range" min="1" max="36" step="1" value="5" data-orientation="vertical">
+                    <span class="irs-grid-pol irs-2" style="left: 0%"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="basic-url" class="form-label">Aylıq ödəniş (şərti, orta faiz dərəcəsi ilə)</label>
+                <div class="SlideContainer">
+                    <div class="amount">
+                        <span id="value3"></span>
+                        <span>AZN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 mx-auto my-5">
+                    <a href="# " class="d-grid gap-2 btn rounded-pill text-white hoverbtn ">Krediti sifariş et</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="content ">
+            <h2 class="my-3">Öz bank məhsulunuzu seçin</h2>
+        </div>
+        <div class="owl-carousel carouselMehsul owl-theme">
+            {% for category in procategory %}
+            <div class="card mb-3 ">
+                <h3 class="card-title productTitle py-3">{{category.title}}</h3>
+                <div class="owl-carousel subCarousel owl-theme firstbody">
+                    {% for product in products %} {% if product.category_id == category.id%}
+                    <div class="card mb-3 bankmehsulu">
+                        <a href="">
+                            <h4 class="card-title prtitle">{{product.title}}</h4>
+                        </a>
+                        <p class="px-3">{{product.desc}}</p>
+                    </div>
+                    {% endif %} {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 d-flex">
+                <div class="app">
+                    <div class="appimg"><img src="{{url_for('static', filename = 'images/infosection.png')}}" alt=""></div>
+                    <div class="block">
+                        <div class="apptext">
+                            <h3 class="py-3">Mobil şöbə – bankınız bir toxunuşda!</h3>
+                            <div class="apptextinfo">Bank Respublika-nın Mobil Şöbəsi müştərilərə çox sadə, rahat və operativ bank xidmətləri ilə dünyanın istənilən ölkəsindən idarəetmə imkanı yaradan bir xidmətdir.</div>
+                            <div class="d-grid gap-2 col-4 ">
+                                <a href="# " class="d-grid gap-2 btn rounded-pill text-white hoverbtn">Ətraflı oxu</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="appstore">
+                        <li>
+                            <a href="https://apps.apple.com/az/app/mobil-%C5%9F%C3%B6b%C9%99/id1098662523?mt=8"><img src="{{url_for('static', filename = 'images/app-store-badge.png')}}" alt=""></a>
+                        </li>
+                        <li>
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.brmobilshobe&hl=ru"><img src="{{url_for('static', filename = 'images/google-play-badge.png')}}" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="https://www.bankrespublika.az/uploads/AZ%20AppGallery%20Logo%20Black.png"><img style="width: 116px; height:auto;" src="{{url_for('static', filename = 'images/huawei.png')}}" alt=""></a>
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4 ">
+                <a class="allcompany" href="{{url_for( 'company_page', filename='allcompanies.html' )}}">Bütün kampaniyalar</a>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active arrowrange" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions " data-bs-slide-to="1" aria-label="Slide 2" class="arrowrange"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img style="opacity: 0.7;" src="{{url_for('static', filename = 'images/yubiley_smcard.jpg')}}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block smallcarousel">
+                                <h3>Bank Respublika “Yubiley Endirimi” adlı nağd kredit kampaniyasına start verib</h3>
+                                <p class="description">Bank Respublika 30 yaşına həsr edilmiş nağd kredit kampaniyası elan edir!</p>
+                                <a href=""><button class="ətraflı">Ətraflı</button></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img style="opacity: 0.7;" src="{{url_for('static', filename = 'images/Maksimal_smcard.jpg')}}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block  smallcarousel">
+                                <h3 class="title">Bank Respublika 30 yaşı münasibətilə mikro kredit faizlərində 30% endirim elan edib!</h3>
+                                <p class="description">Kampaniya çərçivəsində Bank Respublikaya müraciət edən iş adamları, mikro və aqro kredit faizlərində 30% ENDİRİM əldə edə biləcək!</p>
+                                <a href=""><button class="ətraflı">Ətraflı</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="nextpre">
+                        <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleControls " data-bs-slide="prev ">
+                      <span class="carousel-control-prev-icon preicon " aria-hidden="true "></span>
+                      <span class="visually-hidden ">Previous</span>
+                    </button>
+                        <button class="carousel-control-next  " type="button " data-bs-target="#carouselExampleControls " data-bs-slide="next ">
+                      <span class="carousel-control-next-icon nexticon" ></span>
+                      <span class="visually-hidden ">Next</span>
+                    </button>
+                        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon preicon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon nexticon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content ">
+        <h2 class="blockHead">Xəbərlər
+            <a href="{{url_for( 'news_page', filename='news.html' )}} "><u class="allnews"> Bütün Xəbərlər</u></a>
+        </h2>
+    </div>
+    <div class="owlslider">
+        <div class="owl-carousel carouselXeber owl-theme ">
+
+            {% for xeber in news %}
+
+            <div class="slider-card d-flex">
+                <div class="mx-2">
+                    <img alt="" src="{{ url_for( 'static', filename='images/' ~ xeber.img_url ) }} " />
+                </div>
+                <div>
+                    <a href="{{url_for( 'dinamic', slug=xeber.slug)}} ">
+                        <h5 class="card-title ">{{xeber.title}}</h5>
+                    </a>
+                    <p class="card-text ">{{xeber.small_desc}}</p>
+                    <p class="card-text "><small class="text-muted ">{{xeber.created_at}}</small></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %} {% block js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <script src="{{url_for( 'static', filename='js/owl.js' )}} "></script>
+    <script src="{{url_for( 'static', filename='js/calculator.js' )}} "></script>
+    {% endblock %}
+</body>
+
+</html>
